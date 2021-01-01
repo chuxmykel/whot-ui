@@ -13,11 +13,11 @@ const cards = [
   },
   {
     shape: 'star',
-    number: 2,
+    number: 8,
   },
   {
     shape: 'cross',
-    number: 8,
+    number: 2,
   },
   {
     shape: 'triangle',

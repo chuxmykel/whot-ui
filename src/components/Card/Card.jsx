@@ -37,8 +37,8 @@ const Card = ({ shape, number, onClick }) => {
   };
   const starSmallNumberStyleBottom = {
     transform: isStar
-      ? `translate(${isOneDigit ? '-'
-        : ''}${starSmallNumberXOffset}px, -35px) rotate(180deg)` : '',
+      ? `translate(${isOneDigit ? '-' : ''}${starSmallNumberXOffset}px, -39.5px) rotate(180deg)`
+      : '',
   };
   const starNumberStyleTop = {
     transform: isStar ? 'translate(0, 36px)' : '',
