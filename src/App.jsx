@@ -13,7 +13,7 @@ const cards = [
   },
   {
     shape: 'star',
-    number: 8,
+    number: 4,
   },
   {
     shape: 'cross',

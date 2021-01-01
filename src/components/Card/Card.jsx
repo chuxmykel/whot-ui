@@ -25,19 +25,19 @@ const Card = ({ shape, number, onClick }) => {
   const starStyle = {
     display: isStar ? 'block' : 'none',
     padding: '10px',
-    fontSize: '14px',
+    fontSize: '12px',
     color: 'white',
     backgroundColor: '#ffffff00',
   };
-  const starSmallNumberXOffset = isOneDigit ? '1' : '2.5';
+  const starSmallNumberXOffset = isOneDigit ? '1.9' : '1.9';
   const starSmallNumberStyleTop = {
     transform: isStar
-      ? `translate(${isOneDigit ? '' : '-'}${starSmallNumberXOffset}px, 36px)`
+      ? `translate(${isOneDigit ? '' : '-'}${starSmallNumberXOffset}px, 34px)`
       : '',
   };
   const starSmallNumberStyleBottom = {
     transform: isStar
-      ? `translate(${isOneDigit ? '-' : ''}${starSmallNumberXOffset}px, -39.5px) rotate(180deg)`
+      ? `translate(${isOneDigit ? '-' : ''}${starSmallNumberXOffset}px, -38px) rotate(180deg)`
       : '',
   };
   const starNumberStyleTop = {
