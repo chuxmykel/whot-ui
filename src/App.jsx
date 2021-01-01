@@ -1,24 +1,40 @@
 import React from 'react';
 
-import { Card } from './components';
+import { GamePage } from './pages';
 
-const cards = ['circle', 'triangle', 'cross', 'square', 'star', 'whot'];
+const cards = [
+  {
+    shape: 'circle',
+    number: 4,
+  },
+  {
+    shape: 'square',
+    number: 14,
+  },
+  {
+    shape: 'star',
+    number: 2,
+  },
+  {
+    shape: 'cross',
+    number: 8,
+  },
+  {
+    shape: 'triangle',
+    number: 1,
+  },
+  {
+    shape: 'whot',
+    number: 20,
+  },
+];
 
-function App() {
-  return (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        height: '100vh',
-      }}
-    >
-      {
-        cards
-          .map((card) => <Card shape={card} number={4} />)
-      }
-    </div>
-  );
-}
+const player = { cards };
+
+const App = () => (
+  <GamePage
+    player={player}
+  />
+);
 
 export default App;

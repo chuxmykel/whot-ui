@@ -3,12 +3,35 @@
   flex-direction: column;
   justify-content: center;
   height: 400px;
+  width: 240px;
   border-radius: 10px;
   padding: 10px 20px;
   box-shadow: 5px 5px 12px 1px rgba(0,0,0,0.43);
   -webkit-box-shadow: 5px 5px 12px 1px rgba(0,0,0,0.43);
   -moz-box-shadow: 5px 5px 12px 1px rgba(0,0,0,0.43);
   color: #7D1428;
+  background-color: white;
+
+
+  &:focus,
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:focus {
+    transform: scale(1.1);
+    outline: 1px solid #7D1428;
+    outline-style: dotted;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+  
+  * {
+    background-color: white;
+  }
 
   .top-num,
   .bottom-num {
@@ -16,5 +39,7 @@
     padding: 5px;
     font-size: 40px;
     font-family: 'Lobster', cursive;
+    background-color: #ffffff00;
   }
+
 }

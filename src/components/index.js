@@ -1,2 +1,2 @@
-/* eslint-disable import/prefer-default-export */
 export { default as Card } from './Card/Card';
+export { default as PlayerCards } from './PlayerCards/PlayerCards';
