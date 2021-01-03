@@ -5,35 +5,40 @@ import Card from '../Card/Card';
 
 import './PlayerCards.scss';
 
-const PlayerCards = ({ cards }) => {
-  function handleClick(shape, number) {
-    // TODO: Implement
-    console.table({ shape, number });
-  }
-
-  return (
-    <div className="card-rack">
-      {cards.map((card) => (
-        <Card
-          shape={card.shape}
-          number={card.number}
-          onClick={handleClick}
-          key={`${card.shape}-${card.number}`}
-        />
-      ))}
-    </div>
-  );
-};
+const PlayerCards = ({ cards, onCardSelected }) => (
+  <div className="card-rack">
+    {cards.map((card) => (
+      <Card
+        shape={card.shape}
+        number={card.number}
+        onClick={onCardSelected}
+        key={`${card.shape}-${card.number}`}
+      />
+    ))}
+  </div>
+);
 
 PlayerCards.propTypes = {
   cards: PropTypes
     .arrayOf(
       PropTypes
         .shape({
-          shape: PropTypes.string.isRequired,
+          shape: PropTypes.oneOf([
+            'circle',
+            'triangle',
+            'cross',
+            'square',
+            'star',
+            'whot',
+          ]).isRequired,
           number: PropTypes.number.isRequired,
         }),
     ).isRequired,
+  onCardSelected: PropTypes.func,
+};
+
+PlayerCards.defaultProps = {
+  onCardSelected: () => {},
 };
 
 export default PlayerCards;

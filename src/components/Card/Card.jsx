@@ -98,7 +98,11 @@ Card.propTypes = {
     'whot',
   ]).isRequired,
   number: PropTypes.number.isRequired,
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
+};
+
+Card.defaultProps = {
+  onClick: () => {},
 };
 
 export default Card;
